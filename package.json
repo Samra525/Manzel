@@ -1,0 +1,19 @@
+{
+  "name": "my-site",
+  "private": true,
+  "scripts": {
+    "develop": "gridsome develop",
+    "explore": "gridsome explore",
+    "build": "gridsome build"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "gridsome": "^0.7.0",
+    "storyblok-js-client": "^3.3.1",
+    "vuetify": "^2.4.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "lint": "^0.7.0"
+  }
+}
