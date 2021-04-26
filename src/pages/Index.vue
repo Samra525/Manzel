@@ -9,7 +9,7 @@
                 <h1 class="display-1 text-lg-h1 font-weight-thin mb-4">
           {{ $page.landingPage.title }}
         </h1>
-        <p>{{ $page.landingPage.intro }}</p>
+        <p>{{ $page.landingPage.fields.intro }}</p>
       </div>
             </v-col>
           </v-row>

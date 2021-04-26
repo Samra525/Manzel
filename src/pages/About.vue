@@ -9,7 +9,7 @@
                 <h1 class="display-1 text-lg-h1 font-weight-thin mb-4">
           {{ $page.landingPage.title }}
         </h1>
-         <p>{{ $page.landingPage.intro }}</p>
+         <h2>{{ $page.landingPage.fields.intro }}</h2>
 
       </div>
             </v-col>
@@ -26,7 +26,6 @@ query LandingPage {
     title
      fields{
       intro
-      
     }
   }
 }

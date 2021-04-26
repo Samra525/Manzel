@@ -9,7 +9,9 @@
     >
       <v-toolbar-title>
         <v-img src="@/assets/img/logo.png" max-width="50px" />
-        <h1>  <span class="mr-2">Manzel</span></h1>
+        <g-link to="/">   
+        <h1 class="title mb-4">Manzel</h1>
+        </g-link>
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon
