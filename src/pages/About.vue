@@ -1,14 +1,27 @@
 <template>
   <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
+    <template slot="home">
+      <section id="hero">
+         <v-parallax :src="require('@/assets/img/bgDownload.jpg')" height="400">
+          <v-row align="center" justify="center">
+            <v-col cols="12">
+              <div class="text-center">
+                <h1 class="display-1 text-lg-h1 font-weight-thin mb-4">
+          {{ $page.landingPage.title }}
+        </h1>
+      </div>
+            </v-col>
+          </v-row>
+        </v-parallax>
+      </section>
+   </template>
   </Layout>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'About us'
+<page-query>
+query LandingPage {
+  landingPage(path: "about") {
+    title
   }
 }
-</script>
+</page-query>

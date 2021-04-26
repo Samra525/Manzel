@@ -1,46 +1,66 @@
+  
 <template>
   <v-footer dark padless>
-    <v-card class="flex" flat tile>
-      <v-card-title class="teal">
-        <strong class="subheading">Connect with us!</strong>
+    <v-card flat tile class="secondary white--text text-center">
+      <v-card-text>
+        <v-btn
+          v-for="(icon, i) in icons"
+          :key="i"
+          class="mx-4 white--text"
+          :href="icon.link"
+          target="_blank"
+          icon
+        >
+          <v-icon size="24px">{{ icon.text }}</v-icon>
+        </v-btn>
+      </v-card-text>
 
-        <!-- <v-spacer></v-spacer>
+      <v-card-text class="white--text pt-0">
+        {{ $page.landingPage.title }}
+      </v-card-text>
 
-        <v-btn v-for="icon in icons" :key="icon.to" class="mx-4" dark icon>
-          <a :href="icon.to" target="_blank" rel="noopener noreferrer nofollow">
-            <v-icon size="24px">
-              {{ icon.icon }}
-            </v-icon>
-          </a>
-        </v-btn> -->
-      </v-card-title>
+      <v-divider></v-divider>
 
-      <v-card-text class="py-2 white--text text-center">
-        {{ new Date().getFullYear() }} — <strong>Have a safe ride with us</strong>
+      <v-card-text class="white--text">
+        {{ new Date().getFullYear() }} — <strong>Calango WEB</strong>
       </v-card-text>
     </v-card>
   </v-footer>
 </template>
+<page-query>
+query LandingPage {
+  landingPage(path: "footer") {
+    title
+  }
+}
+</page-query>
+<style scoped>
+.v-card {
+  width: 100%;
+}
+</style>
 
 <script>
 export default {
-  data() {
-    return {
-    //   icons: [
-    //     {
-    //       to: 'your LinkedIn URL here (or any social platform you want)',
-    //       icon: 'mdi-linkedin'
-    //     },
-    //     { to: 'https://github.com/your-github/', icon: 'mdi-github' }
-    //   ]
-    };
-  }
+  data: () => ({
+    icons: [
+      {
+        text: "mdi-facebook",
+        link: "https://www.facebook.com/",
+      },
+      {
+        text: "mdi-twitter",
+        link: "https://twitter.com/",
+      },
+      {
+        text: "mdi-linkedin",
+        link: "https://www.linkedin.com/",
+      },
+      {
+        text: "mdi-instagram",
+        link: "https://www.instagram.com/",
+      },
+    ],
+  }),
 };
 </script>
-
-<style scoped>
-.v-btn a {
-  text-decoration: none;
-  color: white;
-}
-</style>

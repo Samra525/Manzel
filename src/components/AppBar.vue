@@ -37,8 +37,8 @@ export default {
     return {
       links: [
         { name: 'Manzel', to: '/' },
-        // { name: 'About', to: '/about' },
-        // { name: 'Blog', to: '/blog' },
+        { name: 'About', to: '/about' },
+         { name: 'Blog', to: '/Navigation' },
         // { name: 'Contact', to: '/contact' }
       ],
     //   socials: [
