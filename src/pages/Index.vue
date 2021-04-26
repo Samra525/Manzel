@@ -2,9 +2,9 @@
   <Layout>
     <template slot="home">
       <section id="hero">
-         <v-parallax :src="require('@/assets/img/hero-bg.jpg')" height="400">
+         <v-parallax :src="require('@/assets/img/bgHero.jpg')" height="400">
           <v-row align="center" justify="center">
-            <v-col cols="12">
+            <v-col cols="35">
               <div class="text-center">
                 <h1 class="display-1 text-lg-h1 font-weight-thin mb-4">
           {{ $page.landingPage.title }}

@@ -63,25 +63,7 @@
     <div class="svg-border-waves text-white">
       <v-img src="~@/assets/img/borderWavesBlue.svg"/>
     </div>
-    <v-snackbar
-        v-model="snackbar.enabled"
-        timeout="3000"
-        right
-        top
-        :color="snackbar.color"
-    >
-      {{ snackbar.text }}
-
-      <template v-slot:action="{ attrs }">
-        <v-btn
-            text
-            v-bind="attrs"
-            @click="snackbar.enabled = false"
-        >
-          Fechar
-        </v-btn>
-      </template>
-    </v-snackbar>
+    
   </section>
   </layout>
 </template>
