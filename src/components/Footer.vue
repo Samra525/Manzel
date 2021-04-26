@@ -22,7 +22,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Calango WEB</strong>
+        {{ new Date().getFullYear() }} — <strong> {{ $page.landingPage.intro }}</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -31,6 +31,9 @@
 query LandingPage {
   landingPage(path: "footer") {
     title
+    fields{
+      intro
+    }
   }
 }
 </page-query>

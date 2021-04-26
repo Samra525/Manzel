@@ -9,6 +9,7 @@
                 <h1 class="display-1 text-lg-h1 font-weight-thin mb-4">
           {{ $page.landingPage.title }}
         </h1>
+        <p>{{ $page.landingPage.intro }}</p>
       </div>
             </v-col>
           </v-row>
@@ -22,6 +23,9 @@
 query LandingPage {
   landingPage(path: "home") {
     title
+    fields{
+      intro
+    }
   }
 }
 </page-query>
