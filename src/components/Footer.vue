@@ -21,7 +21,7 @@
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong> {{ $page.landingPage.fields.intro }}</strong>
+        {{ new Date().getFullYear() }} — <strong> {{ $page.landingPage.fields.text }}</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -31,7 +31,7 @@ query LandingPage {
   landingPage(path: "footer") {
     title
     fields{
-      intro
+      text
     }
   }
 }

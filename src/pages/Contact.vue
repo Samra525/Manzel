@@ -8,10 +8,10 @@
             <v-col cols="12" sm="5">
               <h1 class="font-weight-light display-1">Contact us</h1>
               <h3 class="font-weight-light mt-3">
-                {{ $page.landingPage.fields.intro }}
+                {{ $page.landingPage.title }}
               </h3>
               <h3 class="font-weight-light mt-3">
-                {{ $page.landingPage.title }}
+                {{ $page.landingPage.fields.intro }}
               </h3>
               <h3 class="font-weight-light mt-3">
                 Telefone: +92 (321) 8718888

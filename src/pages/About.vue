@@ -2,7 +2,7 @@
   <Layout>
     <template slot="home">
       <section id="hero">
-         <v-parallax :src="require('@/assets/img/bgDownload.jpg')" height="400">
+         <v-parallax :src="$page.landingPage.fields.image" width="720" height="500" fit="contain" >
           <v-row align="center" justify="center">
             <v-col cols="12">
               <div class="text-center">
@@ -10,6 +10,9 @@
           {{ $page.landingPage.title }}
         </h1>
          <h2>{{ $page.landingPage.fields.intro }}</h2>
+          <p>{{ $page.landingPage.fields.subheading }}</p>
+        <!-- <p>{{ $page.landingPage.fields.text }}</p> -->
+      
 
       </div>
             </v-col>
@@ -26,6 +29,9 @@ query LandingPage {
     title
      fields{
       intro
+      subheading
+      text
+      image
     }
   }
 }
