@@ -12,7 +12,9 @@
             <slot />
           </v-col>
         </v-row>
+        
       </v-container>
+      
     </v-main>
     <Footer />
   </v-app>

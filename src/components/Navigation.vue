@@ -9,7 +9,7 @@
     >
       <v-toolbar-title>
         <g-link to="/">   
-        <h1 class="title mb-4">Manzel</h1>
+        <h1 class="title mb-5">{{ $page.landingPage.fields.btnlogo }}</h1>
         </g-link>
       </v-toolbar-title>
       <v-spacer />
@@ -19,24 +19,29 @@
         v-if="isXs"
       />
       <div v-else>
-        <v-btn text @click="$vuetify.goTo('#features')">
+        <v-btn  rounded
+      color="green"
+      dark>
       <g-link to="/">   
-          <span class="mr-2">Home</span>
+          <span class="mr-2">{{ $page.landingPage.fields.btnhome }}</span>
       </g-link>
     </v-btn>
 
-        <v-btn text @click="$vuetify.goTo('#features')">
+        <v-btn  rounded
+      color="yellow"
+      dark>
       <g-link to="/About">   
-          <span class="mr-2">About us</span>
+          <span class="mr-2">{{ $page.landingPage.fields.btnabout }}</span>
       </g-link>
     </v-btn>
-         <v-btn text @click="$vuetify.goTo('#features')">
+         <v-btn  rounded
+      color="orange"
+      dark>
       <g-link to="/Contact">   
-          <span class="mr-2">Contact us</span>
+          <span class="mr-2">{{ $page.landingPage.fields.btncontact }}</span>
       </g-link>
     </v-btn>
-    
-                  </div>
+      </div>
     </v-app-bar>
 </template>
 <page-query>
@@ -44,14 +49,16 @@ query LandingPage {
   landingPage(path: "buttons-name") {
     title
     fields{
-      intro
-      subheading
-      text
-      image
+      btnlogo
+      btnhome
+      btnabout
+      btncontact
+      
     }
   }
 }
 </page-query>
+
 
 <style scoped>
 .v-toolbar {

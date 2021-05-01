@@ -1,3 +1,4 @@
+
 <template>
   <Layout>
     <template slot="home">
@@ -11,7 +12,7 @@
         </h1>
          <h2>{{ $page.landingPage.fields.intro }}</h2>
           <p>{{ $page.landingPage.fields.subheading }}</p>
-        <!-- <p>{{ $page.landingPage.fields.text }}</p> -->
+        <p>{{ $page.landingPage.fields.btnhome }}</p>
       
 
       </div>
@@ -32,6 +33,10 @@ query LandingPage {
       subheading
       text
       image
+      btnhome
+      btnlogo
+      btncontact
+      btnabout
     }
   }
 }

@@ -71,8 +71,16 @@
 query LandingPage {
   landingPage(path: "home") {
     title
-     fields{
+    fields{
       intro
+      subheading
+      text
+      image
+      btnhome
+      btnlogo
+      btncontact
+      btnabout
+
     }
   }
 }
