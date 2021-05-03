@@ -7,6 +7,8 @@
       class="px-15"
       :class="{ expand: flat }"
     >
+
+
       <v-toolbar-title>
         <g-link to="/">   
         <h1 class="title mb-5">{{ $page.landingPage.fields.btnlogo }}</h1>
@@ -14,7 +16,7 @@
       </v-toolbar-title>
       <v-spacer />
       <v-app-bar-nav-icon
-        @click.stop="drawer = !drawer"
+        @click="drawer = true"
         class="mr-4"
         v-if="isXs"
       />
@@ -58,7 +60,6 @@ query LandingPage {
   }
 }
 </page-query>
-
 
 <style scoped>
 .v-toolbar {

@@ -30,8 +30,6 @@ query LandingPage {
     title
      fields{
       intro
-      subheading
-      text
       image
       btnhome
       btnlogo

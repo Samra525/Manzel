@@ -34,8 +34,7 @@ class StoryblokSource {
       landingPages.addNode({
         fields: {
           intro: story.content.intro,
-          subheading: story.content.subheading,
-          text: story.content.text,
+          footertext: story.content.footertext,
           image: story.content.image,
           btnhome: story.content.btnhome,
           btnabout: story.content.btnabout,

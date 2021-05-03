@@ -15,13 +15,13 @@
       </v-card-text>
 
       <v-card-text class="white--text pt-0">
-        {{ $page.landingPage.fields.text }}
+        {{ $page.landingPage.fields.footertext }}
       </v-card-text>
 
       <v-divider></v-divider>
 
       <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong> {{ $page.landingPage.fields.subheading }}</strong>
+        {{ new Date().getFullYear() }} — <strong> {{ $page.landingPage.fields.footertext }}</strong>
       </v-card-text>
     </v-card>
   </v-footer>
@@ -32,13 +32,12 @@ query LandingPage {
      title
     fields{
       intro
-      subheading
-      text
       image
       btnhome
       btnlogo
       btncontact
       btnabout
+      footertext
 }
   }
 }

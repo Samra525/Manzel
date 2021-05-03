@@ -1,8 +1,8 @@
 <template>
   <v-app>
-    <!-- <AppBar /> -->
+     <!-- <AppBar /> -->
  <Navigation/>
-    <ScrollToTop />
+    
 
     <v-main>
       <slot name="home" />
@@ -20,12 +20,12 @@
   </v-app>
 </template>
  <script>
-// import AppBar from '~/components/AppBar';
+//import AppBar from '~/components/AppBar';
 import Footer from '~/components/Footer';
 import Navigation from '../components/Navigation.vue';
  export default {
    components: {
-    // AppBar,
+    //AppBar,
      Footer,
      Navigation
    }

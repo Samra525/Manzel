@@ -64,8 +64,6 @@ query LandingPage {
     title
     fields{
       intro
-      subheading
-      text
       image
       btnhome
       btnlogo
@@ -73,6 +71,7 @@ query LandingPage {
       btnabout
       btnshare
       btnoffer
+      footertext
       mediaBlocks {
       image
       image_position
