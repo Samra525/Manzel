@@ -1,6 +1,6 @@
 
 <template>
-  <Layout>
+<layout>  
     <template slot="home">
       <section id="hero">
          <v-parallax :src="$page.landingPage.fields.image" width="720" height="500" fit="contain" >
@@ -21,7 +21,7 @@
         </v-parallax>
       </section>
    </template>
-  </Layout>
+  </layout>
 </template>
 
 <page-query>

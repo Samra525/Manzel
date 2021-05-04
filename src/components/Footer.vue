@@ -1,6 +1,6 @@
 <template>
   <v-footer dark padless>
-    <v-card flat tile class="secondary white--text text-center">
+    <v-card flat tile class="flex white--text text-center" >
       <v-card-text>
         <v-btn
           v-for="(icon, i) in icons"

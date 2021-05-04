@@ -14,7 +14,7 @@
                 {{ $page.landingPage.fields.intro }}
               </h3>
               <h3 class="font-weight-light mt-3">
-                Telefone: +92 (321) 8718888
+                {{ $page.landingPage.fields.subheading }}
               </h3>
               <h3 class="font-weight-light">
                 Email: xyz@gmail.com
@@ -65,20 +65,20 @@
     </div>
     
   </section>
-  </layout>
+</layout>
 </template>
 <page-query>
 query LandingPage {
-  landingPage(path: "home") {
+  landingPage(path: "contact-page") {
     title
     fields{
       intro
-      image
       btnhome
       btnlogo
       btncontact
       btnabout
-
+      footertext
+subheading
     }
   }
 }

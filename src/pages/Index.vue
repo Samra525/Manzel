@@ -1,16 +1,15 @@
 <template>
   <Layout>
-    
     <template slot="home">
       <section id="hero">
                <v-parallax :src="$page.landingPage.fields.image" width="720" height="500" fit="contain" >
           <v-row align="center" justify="center">
             <v-col cols="35">
               <div class="text-center">
-                <h1 class="display-1 text-lg-h1 font-weight-thin mb-4">
+                <h1 class="display-1 text-lg-h1 font-weight-thin mb-4" style="color:red;">
           {{ $page.landingPage.title }}
         </h1>
-        <p>{{ $page.landingPage.fields.intro }}</p>
+        <p style="color:red;">{{ $page.landingPage.fields.intro }}</p>
         <div class="text-center">
           <v-btn
       rounded
@@ -44,7 +43,6 @@
           v-bind="mediaBlock"
         />
       </div>
-
       <ul class="Home__teasers mb-5">
         <li
           v-for="teaser in $page.landingPage.fields.teasers"

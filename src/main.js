@@ -2,6 +2,8 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
 
+
+
 export default function (Vue, { appOptions, head }) {
   head.link.push({
     rel: 'stylesheet',
@@ -18,4 +20,5 @@ export default function (Vue, { appOptions, head }) {
   
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  
 }

@@ -1,8 +1,7 @@
 <template>
   <v-app>
      <!-- <AppBar /> -->
- <Navigation/>
-    
+ <Navigation/> 
 
     <v-main>
       <slot name="home" />
@@ -12,22 +11,23 @@
             <slot />
           </v-col>
         </v-row>
-        
+           
       </v-container>
-      
+    
     </v-main>
-    <Footer />
+       <Footer />
   </v-app>
 </template>
  <script>
-//import AppBar from '~/components/AppBar';
+// import AppBar from '~/components/AppBar';
 import Footer from '~/components/Footer';
-import Navigation from '../components/Navigation.vue';
- export default {
+ import Navigation from '../components/Navigation.vue';
+
+export default {
    components: {
     //AppBar,
-     Footer,
-     Navigation
-   }
+      Footer,
+      Navigation
+}
  };
  </script>

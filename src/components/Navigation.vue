@@ -7,16 +7,16 @@
       class="px-15"
       :class="{ expand: flat }"
     >
-
-
+    
       <v-toolbar-title>
         <g-link to="/">   
-        <h1 class="title mb-5">{{ $page.landingPage.fields.btnlogo }}</h1>
+        <h1 class="title mb-20" style="color:yellow;">{{ $page.landingPage.fields.btnlogo }}</h1>
         </g-link>
       </v-toolbar-title>
       <v-spacer />
+      
       <v-app-bar-nav-icon
-        @click="drawer = true"
+          @click="drawer = true"
         class="mr-4"
         v-if="isXs"
       />
@@ -44,7 +44,41 @@
       </g-link>
     </v-btn>
       </div>
+
+
+
+      <v-navigation-drawer v-model="drawer" absolute temporary>
+            <v-list nav dense>
+              <v-list-item-group v-model="group" active-class="deep-white--text text--accent-4">
+                <v-list-item>
+                  <v-list-item-icon>
+                    <v-icon>mdi-home</v-icon>
+                  </v-list-item-icon>
+                  <g-link to="/"> 
+                  <v-list-item-title>{{ $page.landingPage.fields.btnhome }}</v-list-item-title>  </g-link>
+
+
+<v-list-item-icon>
+                    <v-icon>mdi-about</v-icon>
+                  </v-list-item-icon>
+                  <g-link to="/about"> 
+                  <v-list-item-title>{{ $page.landingPage.fields.btnabout }}</v-list-item-title>  </g-link>
+
+<v-list-item-icon>
+                    <v-icon>mdi-contact</v-icon>
+                  </v-list-item-icon>
+                  <g-link to="/contact"> 
+                  <v-list-item-title>{{ $page.landingPage.fields.btncontact }}</v-list-item-title>  </g-link>
+
+
+                </v-list-item>
+              </v-list-item-group>
+            </v-list>
+
+          </v-navigation-drawer>
+
     </v-app-bar>
+
 </template>
 <page-query>
 query LandingPage {
@@ -60,6 +94,15 @@ query LandingPage {
   }
 }
 </page-query>
+<script>
+export default {
+  data() {
+    return {
+      drawer: false
+    }
+  }
+}
+</script>
 
 <style scoped>
 .v-toolbar {

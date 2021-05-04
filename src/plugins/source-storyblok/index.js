@@ -41,6 +41,7 @@ class StoryblokSource {
           btncontact: story.content.btncontact,
           btnlogo: story.content.btnlogo,
           btnshare: story.content.btnshare,
+          subheading: story.content.subheading,
           btnoffer: story.content.btnoffer,
           mediaBlocks: story.content.media_blocks,
           teasers: story.content.teasers,
