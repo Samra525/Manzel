@@ -2,7 +2,6 @@
   <v-app>
      <!-- <AppBar /> -->
  <Navigation/> 
-
     <v-main>
       <slot name="home" />
       <v-container fluid>
@@ -22,12 +21,14 @@
 // import AppBar from '~/components/AppBar';
 import Footer from '~/components/Footer';
  import Navigation from '../components/Navigation.vue';
+ //import ContactForm from '../components/ContactForm.vue';
 
 export default {
    components: {
     //AppBar,
       Footer,
-      Navigation
+      Navigation,
+      //ContactForm
 }
  };
  </script>

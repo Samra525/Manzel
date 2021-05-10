@@ -45,6 +45,7 @@ class StoryblokSource {
           btnoffer: story.content.btnoffer,
           mediaBlocks: story.content.media_blocks,
           teasers: story.content.teasers,
+          formsections: story.content.formsections,
         
         },
         path: story.slug,
