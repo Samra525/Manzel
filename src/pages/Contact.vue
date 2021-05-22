@@ -9,10 +9,13 @@
                 Email: xyz@gmail.com
               </h3>
               <v-divider></v-divider>
-        <ContactForm action="#"></ContactForm>
+        <ContactForm>
+          
+        </ContactForm>
        
   </Layout>
 </template>
+ 
 <page-query>
 query LandingPage {
   landingPage(path: "contact-page") {

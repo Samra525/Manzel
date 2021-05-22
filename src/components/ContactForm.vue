@@ -1,37 +1,16 @@
 <template>
     <form
     id="contact-form" 
-    method="post" 
-    :action=action 
-    name= "contact" 
-    enctype="multipart/form-data" >
+    method="POST" 
+    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe-lfH_5vpNvIoZZQnDPTtX15XPT4AKqe1kReIwG84whC1nTQ/formResponse">
 
-        <div>
-            <label>Full name</label>
-            <input type="text" name="fullname" />
-        </div>
-        <div>
-            <label>Email</label>
-            <input type="email" name="email" />
-        </div>
-        <div>
-            <label>Message</label>
-            <textarea name="message" rows="5"></textarea>
-        </div>
-        <div class="form-group">
-						 		<button class="btn btn-raised btn-block btn-danger">Submit →</button>
-						 	</div>
-               <div id="error_message" style="width:100%; height:100%; display:none; ">
-						<h4>Error</h4>
-						Sorry there was an error sending your form.
-						</div>
-						<div id="success_message" style="width:100%; height:100%; display:none; ">
-						<h2>Success! Your Message was Sent Successfully.</h2>
-						</div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-lfH_5vpNvIoZZQnDPTtX15XPT4AKqe1kReIwG84whC1nTQ/viewform?embedded=true" 
+        width="640" height="641" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </form>
 </template>
 
 <script>
+ 
 export default {
     name: 'ContactForm',
     props: ['action']
