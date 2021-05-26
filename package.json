@@ -10,6 +10,7 @@
     "@sendgrid/mail": "^7.4.4",
     "axios": "^0.21.1",
     "dotenv": "^9.0.2",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "gridsome": "^0.7.0",
     "multiparty": "^4.2.2",
