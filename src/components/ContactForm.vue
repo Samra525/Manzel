@@ -1,10 +1,26 @@
 <template>
+  
     <form
     id="contact-form" 
-    method="POST" 
-    action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeEBD2MQttZul7BbxDbgw1HK02tzvx4Ss2DL-fRM5aLd1FBaw/formResponse">
-  <iframe src="https://formfacade.com/headless/108459905021707939487/home/form/1FAIpQLSeEBD2MQttZul7BbxDbgw1HK02tzvx4Ss2DL-fRM5aLd1FBaw" scrolling="no" frameBorder="0"
-   width="100%" style="height:800px; /*change height as required*/ overflow-y:hidden;"></iframe>
+    method="POST"
+    action="https://docs.google.com/forms/u/0/d/e/
+    1FAIpQLSe_YJ0Ixq91chVXksMZsC7ULHPMThgXI19-Or81LsFCnVs7nQ/formResponse">
+
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_YJ0Ixq91chVXksMZsC7ULHPMThgXI19-Or81LsFCnVs7nQ/viewform?embedded=true" width="640" 
+    height="1078" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading…</iframe>
+
+<!-- <label>Name</label>
+          <input name="entry.2005620554" type="text" />
+
+          <label>Email</label>
+          <input name="entry.1045781291" type="email" required />
+
+<div class="form-group">
+ <button class="btn btn-raised btn-block btn-danger" type="submit" value="submit">Submit →</button>
+						 	</div> -->
+
+
+
     </form>
 </template>
 
