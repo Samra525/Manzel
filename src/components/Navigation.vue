@@ -1,16 +1,14 @@
 <template>
     <v-app-bar
       app
-      :color="color"
+      :color="primary" dark
       :flat="flat"
-      dark
       class="px-15"
       :class="{ expand: flat }"
-    >
-    
+    >  
       <v-toolbar-title>
         <g-link to="/">   
-        <h1 class="title mb-20" style="color:yellow;">{{ $page.landingPage.fields.btnlogo }}</h1>
+        <h1 class="title mb-20" style="color:gray;">{{ $page.landingPage.fields.btnlogo }}</h1>
         </g-link>
       </v-toolbar-title>
       <v-spacer />
@@ -20,10 +18,11 @@
         class="mr-4"
         v-if="isXs"
       />
-      <div v-else>
+      <div v-else >
         <v-btn  rounded
       color="green"
       dark>
+      
       <g-link to="/">   
           <span class="mr-2">{{ $page.landingPage.fields.btnhome }}</span>
       </g-link>
@@ -76,7 +75,6 @@
             </v-list>
 
           </v-navigation-drawer>
-
     </v-app-bar>
 
 </template>
