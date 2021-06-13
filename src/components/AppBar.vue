@@ -1,71 +1,43 @@
 <template>
-  <v-app-bar app dark dense hide-on-scroll elevate-on-scroll>
-    <v-btn icon>
-      <g-link to="/">
-         <!-- <v-icon>mdi-code-tags</v-icon> -->
+<v-toolbar>
+<v-toolbar-side-icon>
+
+</v-toolbar-side-icon>
+<v-toolbar-title>
+<g-link to="/" tag="span" style="cursor: pointer">   
+        <h1 class="title mb-20" style="color:pink;">{{ $page.landingPage.fields.btnlogo }}</h1>
+        </g-link>
+</v-toolbar-title>
+<v-spacer></v-spacer>
+<v-toolbar-items class="hidden-sm-and-down">
+<v-btn  rounded
+      color="green"
+      dark>
+      
+      <g-link to="/">   
+          <span class="mr-2">{{ $page.landingPage.fields.btnhome }}</span>
       </g-link>
     </v-btn>
 
-    <v-spacer />
-
-    <template v-slot:extension>
-      <v-tabs show-arrows centered fixed-tabs>
-        <v-tabs-slider color="#65e620"></v-tabs-slider>
-        <v-tab
-          v-for="({ name, to }, i) in links"
-          :key="i"
-          :to="to"
-          :ripple="{ class: 'green--text' }"
-          >{{ name }}
-          </v-tab>
-      </v-tabs>
-    </template>
-
-    <v-spacer />
-
-    <v-btn icon v-for="({ icon, to }, i) in socials" :key="i">
-      <a :href="to" target="_blank" rel="noopener noreferrer nofollow">
-        <v-icon>{{ icon }}</v-icon>
-      </a>
+        <v-btn  rounded
+      color="yellow"
+      dark>
+      <g-link to="/About">   
+          <span class="mr-2">{{ $page.landingPage.fields.btnabout }}</span>
+      </g-link>
     </v-btn>
-  </v-app-bar>
+         <v-btn  rounded
+      color="orange"
+      dark>
+      <g-link to="/Contact">   
+          <span class="mr-2">{{ $page.landingPage.fields.btncontact }}</span>
+      </g-link>
+    </v-btn>
+
+
+
+
+</v-toolbar-items>
+</v-toolbar>
+
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      links: [
-        { name: 'Manzel', to: '/' },
-        { name: 'About', to: '/about' },
-         { name: 'Blog', to: '/Navigation' },
-        // { name: 'Contact', to: '/contact' }
-      ],
-    //   socials: [
-    //     {
-    //       to: 'your LinkedIn URL here (or any social platform you want)',
-    //       icon: 'mdi-linkedin'
-    //     },
-    //     { to: 'https://github.com/your-github/', icon: 'mdi-github' },
-    //     { to: 'mailto:you@example.com', icon: 'mdi-email' },
-    //     {
-    //       to: '/',
-    //       icon: 'mdi-file-document-outline'
-    //     }
-    //   ]
-    };
-  }
-};
-</script>
-
-<style scoped>
-.v-toolbar__title a {
-  text-decoration: none;
-  color: white;
-}
-
-.v-btn a {
-  text-decoration: none;
-  color: white;
-}
-</style>

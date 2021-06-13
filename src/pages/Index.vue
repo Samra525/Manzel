@@ -2,10 +2,9 @@
   <Layout>
     <template>
       <v-container>
-<div class="heroBlock">
-<v-carousel 
- style="width:1000px;height:500;"
-:show-arrows="false">
+
+<v-carousel>
+
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -13,8 +12,6 @@
     >
     </v-carousel-item>
   </v-carousel>
-
-</div>
       </v-container>
       <!-- <section id="hero">
                <v-parallax :src="$page.landingPage.fields.image" width="720" height="500" fit="contain" >

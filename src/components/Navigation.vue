@@ -1,14 +1,15 @@
 <template>
     <v-app-bar
-      app
-      :color="primary" dark
+    app
+      color="indigo accent-4"
       :flat="flat"
       class="px-15"
       :class="{ expand: flat }"
+
     >  
       <v-toolbar-title>
-        <g-link to="/">   
-        <h1 class="title mb-20" style="color:gray;">{{ $page.landingPage.fields.btnlogo }}</h1>
+        <g-link to="/" tag="span" style="cursor: pointer">   
+        <h1 class="title mb-20" style="color:black;">{{ $page.landingPage.fields.btnlogo }}</h1>
         </g-link>
       </v-toolbar-title>
       <v-spacer />
@@ -19,25 +20,30 @@
         v-if="isXs"
       />
       <div v-else >
-        <v-btn  rounded
-      color="green"
-      dark>
+
+        <v-btn 
+      class="mx-2"
+         depressed
+      color="error"
+ 
+
+>
       
-      <g-link to="/">   
+      <g-link to="/" >   
           <span class="mr-2">{{ $page.landingPage.fields.btnhome }}</span>
       </g-link>
     </v-btn>
 
-        <v-btn  rounded
-      color="yellow"
-      dark>
+        <v-btn class=" mx-2"
+        depressed
+      color="error">
       <g-link to="/About">   
           <span class="mr-2">{{ $page.landingPage.fields.btnabout }}</span>
       </g-link>
     </v-btn>
-         <v-btn  rounded
-      color="orange"
-      dark>
+         <v-btn  class=" mx-2"
+        depressed
+      color="error">
       <g-link to="/Contact">   
           <span class="mr-2">{{ $page.landingPage.fields.btncontact }}</span>
       </g-link>
@@ -46,7 +52,10 @@
 
 
 
-      <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-navigation-drawer v-model="drawer" 
+      absolute
+      temporary
+      width="100%">
             <v-list nav dense>
               <v-list-item-group v-model="group" active-class="deep-white--text text--accent-4">
                 <v-list-item>
@@ -76,7 +85,7 @@
 
           </v-navigation-drawer>
     </v-app-bar>
-
+  
 </template>
 <page-query>
 query LandingPage {

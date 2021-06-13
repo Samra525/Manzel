@@ -18,7 +18,7 @@
   </v-app>
 </template>
  <script>
-// import AppBar from '~/components/AppBar';
+//import AppBar from '~/components/AppBar';
 import Footer from '~/components/Footer';
  import Navigation from '../components/Navigation.vue';
  //import ContactForm from '../components/ContactForm.vue';
