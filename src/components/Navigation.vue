@@ -4,155 +4,47 @@
       color="indigo accent-4"
       :flat="flat"
       class="px-15"
-      :class="{ expand: flat }"
-
-    >  
-      <v-toolbar-title>
-        <g-link to="/" tag="span" style="cursor: pointer">   
+      :class="{ expand: flat }">
+      <v-toolbar-title>   <g-link to="/">   
         <h1 class="title mb-20" style="color:black;">{{ $page.landingPage.fields.btnlogo }}</h1>
-        </g-link>
-      </v-toolbar-title>
-      <v-spacer />
-      
-      <v-app-bar-nav-icon
-          @click="drawer = true"
-        class="mr-4"
-        v-if="isXs"
-      />
-      <div v-else >
+        </g-link></v-toolbar-title>
+      <v-spacer></v-spacer>
 
-        <v-btn 
-      class="mx-2"
-         depressed
-      color="error"
- 
+      <v-toolbar-items class="hidden-xs-only">
+    
+        <v-btn text>
+            <g-link style="text-decoration: none; color: inherit" to="/">
+            {{ $page.landingPage.fields.btnhome }}
+            </g-link></v-btn>
 
->
-      
-      <g-link to="/" >   
-          <span class="mr-2">{{ $page.landingPage.fields.btnhome }}</span>
-      </g-link>
-    </v-btn>
-
-        <v-btn class=" mx-2"
-        depressed
-      color="error">
-      <g-link to="/About">   
-          <span class="mr-2">{{ $page.landingPage.fields.btnabout }}</span>
-      </g-link>
-    </v-btn>
-         <v-btn  class=" mx-2"
-        depressed
-      color="error">
-      <g-link to="/Contact">   
-          <span class="mr-2">{{ $page.landingPage.fields.btncontact }}</span>
-      </g-link>
-    </v-btn>
+        <v-btn text><g-link style="text-decoration: none; color: inherit" to="/about">{{ $page.landingPage.fields.btnabout }}</g-link></v-btn>
+        <v-btn text><g-link style="text-decoration: none; color: inherit" to="/contact">{{ $page.landingPage.fields.btncontact }}</g-link></v-btn>
+      </v-toolbar-items>
+      <div class="hidden-sm-and-up">
+        <v-menu offset-y>
+          <template v-slot:activator="{ on }">
+            <v-app-bar-nav-icon v-on="on"></v-app-bar-nav-icon>
+          </template>
+          <v-list class="responsiveMenu">
+            <v-list-item>
+              <v-list-item-title><router-link to="/">Home</router-link></v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title><router-link to="/about">About</router-link></v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-title><router-link to="/contact">Contact</router-link></v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </div>
-
-
-
-      <v-navigation-drawer v-model="drawer" 
-      absolute
-      temporary
-      width="100%">
-            <v-list nav dense>
-              <v-list-item-group v-model="group" active-class="deep-white--text text--accent-4">
-                <v-list-item>
-                  <v-list-item-icon>
-                    <v-icon>mdi-home</v-icon>
-                  </v-list-item-icon>
-                  <g-link to="/"> 
-                  <v-list-item-title>{{ $page.landingPage.fields.btnhome }}</v-list-item-title>  </g-link>
-
-
-<v-list-item-icon>
-                    <v-icon>mdi-about</v-icon>
-                  </v-list-item-icon>
-                  <g-link to="/about"> 
-                  <v-list-item-title>{{ $page.landingPage.fields.btnabout }}</v-list-item-title>  </g-link>
-
-<v-list-item-icon>
-                    <v-icon>mdi-contact</v-icon>
-                  </v-list-item-icon>
-                  <g-link to="/contact"> 
-                  <v-list-item-title>{{ $page.landingPage.fields.btncontact }}</v-list-item-title>  </g-link>
-
-
-                </v-list-item>
-              </v-list-item-group>
-            </v-list>
-
-          </v-navigation-drawer>
     </v-app-bar>
-  
 </template>
-<page-query>
-query LandingPage {
-  landingPage(path: "buttons-name") {
-    title
-    fields{
-      btnlogo
-      btnhome
-      btnabout
-      btncontact
-      
-    }
-  }
-}
-</page-query>
-<script>
-export default {
-  data() {
-    return {
-      drawer: false
-    }
-  }
-}
-</script>
-
-<style scoped>
-.v-toolbar {
-  transition: 0.6s;
-}
-.expand {
-  height: 80px !important;
-  padding-top: 10px;
-}
-</style>
 
 <script>
 export default {
+  name: "Header",
   data: () => ({
-    drawer: null,
-    isXs: false,
-    items: [
-      ["mdi-home-outline", "Home", "#hero"],
-      ["mdi-information-outline", "About", "#features"],
-      ["mdi-download-box-outline", "Contact", "#download"],
-    ],
-  }),
-  props: {
-    color: String,
-    flat: Boolean,
-  },
-  methods: {
-    onResize() {
-      this.isXs = window.innerWidth < 850;
-    },
-  },
-  watch: {
-    isXs(value) {
-      if (!value) {
-        if (this.drawer) {
-          this.drawer = false;
-        }
-      }
-    },
-  },
-  mounted() {
-    this.onResize();
-    window.addEventListener("resize", this.onResize, { passive: true });
-  },
+  })
 };
 </script>

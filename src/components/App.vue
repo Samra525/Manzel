@@ -1,92 +1,159 @@
 <template>
-  <div id="app">
-    <v-app id="inspire">
-      <v-toolbar color="indigo" dark fixed app>
-        <v-toolbar-title>Toolbar Mobile Menu</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items class="hidden-sm-and-down">
-          <v-btn v-for="item in menu" :key="item.icon" :to="item.link" flat>{{
-            item.title
-          }}</v-btn>
-        </v-toolbar-items>
-        <v-menu class="hidden-md-and-up">
-          <v-toolbar-side-icon slot="activator"></v-toolbar-side-icon>
-          <v-list>
-            <v-list-tile v-for="item in menu" :key="item.icon">
-              <v-list-tile-content>
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </v-list>
-        </v-menu>
-      </v-toolbar>
+    <v-app-bar
+    app
+      color="indigo accent-4"
+      :flat="flat"
+      class="px-15"
+      :class="{ expand: flat }"
 
-      <v-content>
-        <v-container fluid fill-height>
-          <v-flex xs12 sm6 offset-sm3>
-            <!-- <v-card>
-              <v-img
-                src="https://cdn.vuetifyjs.com/images/cards/desert.jpg"
-                aspect-ratio="2.75"
-              ></v-img> -->
+    >  
+      <v-toolbar-title>
+        <g-link to="/" tag="span" style="cursor: pointer">   
+        <h1 class="title mb-20" style="color:black;">{{ $page.landingPage.fields.btnlogo }}</h1>
+        </g-link>
+      </v-toolbar-title>
+      <v-spacer />
+      
+      <v-app-bar-nav-icon
+          @click="drawer = true"
+        class="mr-4"
+        v-if="isXs"
+      />
+      <div v-else >
 
-              <v-card-title primary-title>
-                <div>
-                  <h3 class="headline mb-0">
-                    Vuetify Mobile Navbar using v-menu
-                  </h3>
-                  <div>
-                    <p>
-                      Quick example of collapsable mobile menu
-                      <tt>&lt;v-toolbar&gt;</tt>, with a
-                      <tt>&lt;v-menu&gt;</tt> for mobile screens.
-                    </p>
-                    <p>
-                      Also shows how to use <tt>.hidden-md-and-up</tt> CSS
-                      classes to appropriately hide/show the menu depending upon
-                      window width.
-                    </p>
-                  </div>
-                </div>
-              </v-card-title>
+        <v-btn 
+      class="mx-2"
+         depressed
+      color="error"
+ 
 
-              <v-card-actions>
-                <v-btn flat color="orange">Share</v-btn>
-                <v-btn flat color="orange">Explore</v-btn>
-              </v-card-actions>
-            </v-card>
-          </v-flex>
-        </v-container>
-      </v-content>
+>
+      
+      <g-link to="/" >   
+          <span class="mr-2">{{ $page.landingPage.fields.btnhome }}</span>
+      </g-link>
+    </v-btn>
 
-      <v-footer height="auto" color="indigo" dark>
-        <v-layout justify-center row wrap>
-          <v-flex color="indigo" dark py-3 text-xs-center white--text xs12>
-            &copy;2018 — <strong>Vuetify</strong>
-          </v-flex>
-        </v-layout>
-      </v-footer>
-    </v-app>
-  </div>
+        <v-btn class=" mx-2"
+        depressed
+      color="error">
+      <g-link to="/About">   
+          <span class="mr-2">{{ $page.landingPage.fields.btnabout }}</span>
+      </g-link>
+    </v-btn>
+         <v-btn  class=" mx-2"
+        depressed
+      color="error">
+      <g-link to="/Contact">   
+          <span class="mr-2">{{ $page.landingPage.fields.btncontact }}</span>
+      </g-link>
+    </v-btn>
+      </div>
 
+
+
+      <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list-item>
+        <v-list-item-avatar>
+          <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
+        </v-list-item-avatar>
+
+        <v-list-item-content>
+          <v-list-item-title>John Leider</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list dense>
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
+    </v-app-bar>
+  
 </template>
-
+<page-query>
+query LandingPage {
+  landingPage(path: "buttons-name") {
+    title
+    fields{
+      btnlogo
+      btnhome
+      btnabout
+      btncontact
+      
+    }
+  }
+}
+</page-query>
 <script>
 export default {
   data() {
     return {
-      menu: [
-        { icon: "home", title: "Link A" },
-        { icon: "info", title: "Link B" },
-        { icon: "warning", title: "Link C" }
-      ]
-    };
-  },
-
-  methods: {
-    menuItems() {
-      return this.menu;
+      drawer: false
     }
   }
+}
+</script>
+
+<style scoped>
+.v-toolbar {
+  transition: 0.6s;
+}
+.expand {
+  height: 80px !important;
+  padding-top: 10px;
+}
+</style>
+
+<script>
+export default {
+  data: () => ({
+    drawer: null,
+    isXs: false,
+    items: [
+          { title: 'Home', icon: 'mdi-view-dashboard' },
+          { title: 'About', icon: 'mdi-forum' },
+        ],
+  }),
+  props: {
+    color: String,
+    flat: Boolean,
+  },
+  methods: {
+    onResize() {
+      this.isXs = window.innerWidth < 850;
+    },
+  },
+  watch: {
+    isXs(value) {
+      if (!value) {
+        if (this.drawer) {
+          this.drawer = false;
+        }
+      }
+    },
+  },
+  mounted() {
+    this.onResize();
+    window.addEventListener("resize", this.onResize, { passive: true });
+  },
 };
 </script>

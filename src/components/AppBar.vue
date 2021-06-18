@@ -1,43 +1,60 @@
 <template>
-<v-toolbar>
-<v-toolbar-side-icon>
+<v-card>
+<v-app-bar
+      color="deep-purple accent-4"
+      dark
+      prominent
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-</v-toolbar-side-icon>
-<v-toolbar-title>
-<g-link to="/" tag="span" style="cursor: pointer">   
-        <h1 class="title mb-20" style="color:pink;">{{ $page.landingPage.fields.btnlogo }}</h1>
-        </g-link>
-</v-toolbar-title>
-<v-spacer></v-spacer>
-<v-toolbar-items class="hidden-sm-and-down">
-<v-btn  rounded
-      color="green"
-      dark>
-      
-      <g-link to="/">   
-          <span class="mr-2">{{ $page.landingPage.fields.btnhome }}</span>
-      </g-link>
-    </v-btn>
+      <v-toolbar-title>My files</v-toolbar-title>
 
-        <v-btn  rounded
-      color="yellow"
-      dark>
-      <g-link to="/About">   
-          <span class="mr-2">{{ $page.landingPage.fields.btnabout }}</span>
-      </g-link>
-    </v-btn>
-         <v-btn  rounded
-      color="orange"
-      dark>
-      <g-link to="/Contact">   
-          <span class="mr-2">{{ $page.landingPage.fields.btncontact }}</span>
-      </g-link>
-    </v-btn>
+      <v-spacer></v-spacer>
 
+      <v-btn icon>
+        <v-icon>mdi-magnify</v-icon>
+      </v-btn>
 
+      <v-btn icon>
+        <v-icon>mdi-filter</v-icon>
+      </v-btn>
 
+      <v-btn icon>
+        <v-icon>mdi-dots-vertical</v-icon>
+      </v-btn>
+    </v-app-bar>
 
-</v-toolbar-items>
-</v-toolbar>
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      bottom
+      temporary
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>Foo</v-list-item-title>
+          </v-list-item>
 
+          <v-list-item>
+            <v-list-item-title>Bar</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Fizz</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+ </v-card>
 </template>
