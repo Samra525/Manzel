@@ -5,9 +5,9 @@
   <!-- <App/> -->
     <v-main>
       <slot name="home" />
-      <v-container fluid>
-        <v-row no-gutters>
-          <v-col md="12">
+      <v-container fluid >
+        <v-row>
+          <v-col xs="6" offset-xs="3">
       <slot/>
     </v-col>
         </v-row>

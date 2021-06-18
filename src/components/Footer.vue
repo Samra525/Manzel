@@ -1,6 +1,10 @@
 <template>
-  <v-footer dark padless>
-    <v-card flat tile class="flex white--text text-center" >
+  <v-footer dark padless
+  
+  
+>
+    <v-card flat tile class="flex white--text text-center" 
+    color="indigo accent-4">
       <v-card-text>
         <v-btn
           v-for="(icon, i) in icons"
@@ -14,13 +18,13 @@
         </v-btn>
       </v-card-text>
 
-      <v-card-text class="white--text pt-0">
+      <v-card-text class=" white--text pt-0">
         {{ $page.landingPage.fields.footertext }}
       </v-card-text>
 
       <v-divider></v-divider>
 
-      <v-card-text class="white--text">
+      <v-card-text class="py-2 white--text">
         {{ new Date().getFullYear() }} — <strong> {{ $page.landingPage.fields.footertext }}</strong>
       </v-card-text>
     </v-card>

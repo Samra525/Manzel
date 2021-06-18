@@ -3,7 +3,7 @@
     <template>
       <v-container>
 
-<v-carousel>
+<v-carousel cycle hide-delimiters>
 
     <v-carousel-item
       v-for="(item,i) in items"
