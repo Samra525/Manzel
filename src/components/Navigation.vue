@@ -1,12 +1,13 @@
 <template>
     <v-app-bar
     app
-      color="indigo accent-4"
+      color="green"
       :flat="flat"
       class="px-15"
       :class="{ expand: flat }">
-      <v-toolbar-title>   <g-link to="/">   
-        <h1 class="title mb-20" style="color:black;">{{ $page.landingPage.fields.btnlogo }}</h1>
+      <v-toolbar-title>   <g-link style="text-decoration: none;" to="/">  
+        <h1 class="title mb-20" style="color:black;">Manzel</h1> 
+        <h1 class="title mb-20" style="color:white;">{{ $page.landingPage.fields.btnlogo }}</h1>
         </g-link></v-toolbar-title>
       <v-spacer></v-spacer>
 
