@@ -10,7 +10,7 @@
         </h2>
       </div>
 
-      <div class="About__media-blocks mb-5">
+      <!-- <div class="About__media-blocks mb-5">
         <AppMediaBlock
           v-for="mediaBlock in this.$page.landingPage.fields.mediaBlocks"
           :key="mediaBlock._uid"
@@ -26,7 +26,7 @@
           <AppTeaser v-bind="teaser"/>
         </li>
       </ul>
-    </div>
+    </div> -->
   </Layout>
 </template>
 
@@ -44,34 +44,20 @@ query LandingPage {
       btnshare
       btnoffer
       footertext
-    mediaBlocks {
-      image
-      image_position
-      text
-      title
-    }
-    teasers {
-      image
-      link {
-        url
-      }
-      text
-      title
-    }
   }
 }
 }
 </page-query>
 
 <script>
-import AppMediaBlock from '../components/AppMediaBlock.vue';
-import AppTeaser from '../components/AppTeaser.vue';
-export default {
-  components: {
-    AppMediaBlock,
-    AppTeaser,
-  },
-};
+// import AppMediaBlock from '../components/AppMediaBlock.vue';
+// import AppTeaser from '../components/AppTeaser.vue';
+// export default {
+//   components: {
+//     AppMediaBlock,
+//     AppTeaser,
+//   },
+// };
 </script>
 
 <style>
