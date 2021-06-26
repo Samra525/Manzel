@@ -1,18 +1,18 @@
 <template>
   <div class="AppTeaser card">
-    <!-- <img
+    <img
       :src="imageSrc"
       :srcset="imageSrcset"
       class="card-img-top"
-    > -->
+    >
     <div class="card-body">
       <h5 class="card-title">{{ title }}</h5>
       <p class="card-text">{{ text }}</p>
       <a
-        :href="link. cached_url"
+        :href="link.url"
         class="btn btn-primary"
       >
-        More about us
+        Read more
       </a>
     </div>
   </div>

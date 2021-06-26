@@ -4,8 +4,7 @@
       <h2>{{ title }}</h2>
       <p>{{ text }}</p>
     </div>
-  </div>
-    <!-- <div
+    <div
       v-if="image"
       :class="{
         [`AppMediaBlock__figure`]: true,
@@ -16,7 +15,7 @@
         :src="imageSrc"
         :srcset="imageSrcset"
       >
-    </div> -->
+    </div>
   </div>
 </template>
 

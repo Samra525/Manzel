@@ -1,41 +1,98 @@
-
 <template>
-<layout>  
-    <template slot="home">
-      <section id="hero">
-         <v-parallax :src="$page.landingPage.fields.image" width="720" height="500" fit="contain" >
-          <v-row align="center" justify="center">
-            <v-col cols="12">
-              <div class="text-center">
-                <h1 class="display-1 text-lg-h1 font-weight-thin mb-4">
-          {{ $page.landingPage.title }}
+  <Layout>
+    <div class="About">
+      <div class="About__hero mb-4 mb-md-5 mx-auto text-center">
+        <h1 class="display-4">
+          {{ this.$page.landingPage.title }}
         </h1>
-         <h2>{{ $page.landingPage.fields.intro }}</h2>
-          <p>{{ $page.landingPage.fields.subheading }}</p>
-        <p>{{ $page.landingPage.fields.btnhome }}</p>
-      
-
+        <h2 class="lead">
+          {{ this.$page.landingPage.fields.intro }}
+        </h2>
       </div>
-            </v-col>
-          </v-row>
-        </v-parallax>
-      </section>
-   </template>
-  </layout>
+
+      <div class="About__media-blocks mb-5">
+        <AppMediaBlock
+          v-for="mediaBlock in this.$page.landingPage.fields.mediaBlocks"
+          :key="mediaBlock._uid"
+          v-bind="mediaBlock"
+        />
+      </div>
+
+      <ul class="About__teasers mb-5">
+        <li
+          v-for="teaser in this.$page.landingPage.fields.teasers"
+          :key="teaser._uid"
+        >
+          <AppTeaser v-bind="teaser"/>
+        </li>
+      </ul>
+    </div>
+  </Layout>
 </template>
 
 <page-query>
 query LandingPage {
   landingPage(path: "about") {
     title
-     fields{
-      intro
-      image
+    fields{
+    intro
+    image
       btnhome
       btnlogo
       btncontact
       btnabout
+      btnshare
+      btnoffer
+      footertext
+    mediaBlocks {
+      image
+      image_position
+      text
+      title
+    }
+    teasers {
+      image
+      link {
+        url
+      }
+      text
+      title
     }
   }
 }
+}
 </page-query>
+
+<script>
+import AppMediaBlock from '../components/AppMediaBlock.vue';
+import AppTeaser from '../components/AppTeaser.vue';
+export default {
+  components: {
+    AppMediaBlock,
+    AppTeaser,
+  },
+};
+</script>
+
+<style>
+.About__hero {
+  max-width: 36em;
+}
+.About__media-blocks > :not(:last-child) {
+  margin-bottom: 4em;
+}
+.About__teasers {
+  display: flex;
+  margin-top: -1em;
+  margin-left: -1em;
+  padding-left: 0;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.About__teasers > * {
+  padding-top: 1em;
+  padding-left: 1em;
+  flex-basis: 16em;
+  flex-grow: 9999;
+}
+</style>

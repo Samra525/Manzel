@@ -62,9 +62,9 @@
         >
           <AppTeaser v-bind="teaser"/>
         </li>
-      </ul>
-    </div> -->
-   </template>
+      </ul> -->
+
+</template>
 </layout>
 </template>
 

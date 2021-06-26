@@ -3,7 +3,7 @@
     app
       color="green"
       :flat="flat"
-      class="px-15"
+      class="px-20"
       :class="{ expand: flat }">
       <v-toolbar-title>   <g-link style="text-decoration: none;" to="/">  
         <h1 class="title mb-20" style="color:black;">Manzel</h1> 

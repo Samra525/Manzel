@@ -1,7 +1,7 @@
 const path = require(`path`);
 
 module.exports = {
-  siteName: `Building a Static Site with Storyblok and Gridsome`,
+  siteName: `Manzel`,
   plugins: [
     {
       use: path.resolve(`./src/plugins/source-storyblok`),
