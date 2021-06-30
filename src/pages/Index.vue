@@ -2,7 +2,6 @@
   <Layout>
     <template>
       <v-container>
-
 <v-carousel cycle hide-delimiters>
 
     <v-carousel-item
@@ -12,7 +11,14 @@
     >
     </v-carousel-item>
   </v-carousel>
+  <div class="fb-messengermessageus"
+         messenger_app_id="95100348886"
+         page_id="108019441538563"
+         color="blue"
+         size="large">
+    </div>
       </v-container>
+      
       <!-- <section id="hero">
                <v-parallax :src="$page.landingPage.fields.image" width="720" height="500" fit="contain" >
           <v-row align="center" justify="center">

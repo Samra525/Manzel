@@ -1,8 +1,15 @@
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
+import Vue from 'vue'
+import VueFbCustomerChat from 'vue-fb-customer-chat'
 
 
+Vue.use(VueFbCustomerChat, {
+  page_id: 108019441538563, //  change 'null' to your Facebook Page ID,
+  theme_color: '#333333', // theme color in HEX
+  locale: 'en_US', // default 'en_US'
+})
 
 export default function (Vue, { appOptions, head }) {
   head.link.push({
@@ -21,4 +28,8 @@ export default function (Vue, { appOptions, head }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
   
+
+  
 }
+
+

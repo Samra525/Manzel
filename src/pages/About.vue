@@ -17,7 +17,6 @@
           v-bind="mediaBlock"
         />
       </div>
-
       <ul class="About__teasers mb-5">
         <li
           v-for="teaser in this.$page.landingPage.fields.teasers"
@@ -28,8 +27,17 @@
       </ul>
     </div> -->
     </div>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div class="fb-messengermessageus"
+         messenger_app_id="95100348886"
+         page_id="108019441538563"
+         color="blue"
+         size="large">
+    </div>
   </Layout>
 </template>
+
+
 
 <page-query>
 query LandingPage {
@@ -50,16 +58,6 @@ query LandingPage {
 }
 </page-query>
 
-<script>
-// import AppMediaBlock from '../components/AppMediaBlock.vue';
-// import AppTeaser from '../components/AppTeaser.vue';
-// export default {
-//   components: {
-//     AppMediaBlock,
-//     AppTeaser,
-//   },
-// };
-</script>
 
 <style>
 .About__hero {
@@ -82,4 +80,5 @@ query LandingPage {
   flex-basis: 16em;
   flex-grow: 9999;
 }
+
 </style>
