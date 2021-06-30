@@ -12,7 +12,12 @@
         <ContactForm>
           
         </ContactForm>
-       
+        <div class="fb-messengermessageus"
+         messenger_app_id="95100348886"
+         page_id="113418543692422"
+         color="blue"
+         size="large">
+    </div>
   </Layout>
 </template>
  
