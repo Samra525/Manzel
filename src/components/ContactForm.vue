@@ -37,10 +37,6 @@
             <textarea input type="text" rows="5"  name="entry.839337160"  placeholder="Please enter your comments" required/>
         </div>
 
-
-
-
-
         <div class="form-group">
  <button class="btn btn-raised btn-block btn-danger" type="submit" value="submit">Submit →</button>
 						 	</div>
