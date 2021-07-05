@@ -7,9 +7,9 @@
       <slot name="home" />
       <v-container fluid >
         <v-row>
-          <v-col xs="6" offset-xs="3">
+           <v-col xs="6" offset-xs="3">
       <slot/>
-    </v-col>
+    </v-col> 
         </v-row>
            
       </v-container>

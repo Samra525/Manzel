@@ -56,7 +56,7 @@ export default {
     icons: [
       {
         text: "mdi-facebook",
-        link: "https://www.facebook.com/",
+        link: "https://www.facebook.com/ManzelApp/",
       },
       {
         text: "mdi-twitter",

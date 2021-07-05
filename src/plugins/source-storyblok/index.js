@@ -36,6 +36,8 @@ class StoryblokSource {
           intro: story.content.intro,
           footertext: story.content.footertext,
           image: story.content.image,
+          Text: story.content.Text,
+          Description: story.content.Description,
           btnhome: story.content.btnhome,
           btnabout: story.content.btnabout,
           btncontact: story.content.btncontact,
@@ -46,7 +48,7 @@ class StoryblokSource {
           mediaBlocks: story.content.media_blocks,
           teasers: story.content.teasers,
           formsections: story.content.formsections,
-        
+          text1: story.content.text1,
         },
         path: story.slug,
         title: story.content.title,

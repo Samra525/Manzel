@@ -2,22 +2,66 @@
   <Layout>
     <template>
       <v-container>
-<v-carousel cycle hide-delimiters>
-
-    <v-carousel-item
+<v-carousel cycle hide-delimiters
+height="300px"
+>
+  <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
       :src="item.src"
+      
     >
     </v-carousel-item>
   </v-carousel>
-  <div class="fb-messengermessageus"
-         messenger_app_id="95100348886"
-         page_id="113418543692422"
-         color="blue"
-         size="large">
-    </div>
+          
       </v-container>
+  
+        <main class="o-main">
+                        
+<div class="o-section">
+    <div class="o-container o-container--smaller o-container--tablet-full u--align-center">
+        <h1 class="c-headline--simple u--align-center text-center">
+              {{  $page.landingPage.title }}      </h1>
+    </div>
+</div>
+
+<div class="o-container o-container--smaller o-container--tablet-full u-bg-white">
+    <div class="o-container__content">
+        <span id="travel" class="c-anchor--small"></span>
+        <section class="o-section c-post__about-us u--align-center">
+            <h2 style="text-align: center;"><div class="c-post__quote"><strong>{{$page.landingPage.fields.intro}}</strong>
+            <div class="c-post__quote-author"> {{$page.landingPage.fields.Text}} </div></div></h2>
+            <p style="text-align: left;">
+
+{{$page.landingPage.fields.text1}}
+            </p>
+ <h2 style="text-align: center;">
+<div class="c-post__quote-author"> CURIOUS ABOUT OUR IMPACTS? </div></h2>
+
+<p style="text-align: left;"><strong>{{$page.landingPage.fields.Description}}</strong><br>
+<p style="text-align: left;"><strong>FIND OUT MORE ABOUT MANZEL</strong><br>
+<a href="">Founders</a><br>
+<a href="">Culture</a><br>
+<a href="">Newsroom<br>
+</a><a href="">Dream jobs<br>
+</a><a href="">Inside Story</a></p>
+<p style="text-align: left;">
+</p>        </section>
+
+        <section class="o-section u--align-center">
+            <h2 class="c-headline--primary">
+                Become the part of our story!            </h2>
+            <p>
+                <a target="_blank" href="" 
+                class="c-btn c-btn--medium c-btn--blue c-btn--rounded">
+                    Download App                </a>
+               
+            </p>
+        </section>
+    </div>
+</div>
+                    </main>
+        
       
       <!-- <section id="hero">
                <v-parallax :src="$page.landingPage.fields.image" width="720" height="500" fit="contain" >
@@ -88,6 +132,9 @@ query LandingPage {
       btnshare
       btnoffer
       footertext
+      Text
+      Description
+      text1
       mediaBlocks {
       image
       image_position
@@ -109,22 +156,23 @@ query LandingPage {
 }
 </page-query>
 <script>
-  export default {
-    data () {
-      return {
-        items: [
-          {
-            src: '//a.storyblok.com/f/110353/1920x840/f7ee4fb113/ride1artboard-5-100.jpg',
-                    },
-          {
-            src: '//a.storyblok.com/f/110353/1288x564/3a7b67ff5e/download-1.jfif',
-          },
-          {
-            src: '//a.storyblok.com/f/110353/1600x700/21600b6877/download-2.jfif',
-          },
-          
-        ],
-      }
-    },
-  }
+
+export default {
+
+  data() {
+    return {
+      items: [
+        // {
+        //   src: "//a.storyblok.com/f/110353/1920x840/f7ee4fb113/ride1artboard-5-100.jpg",
+        // },
+        {
+          src: "//a.storyblok.com/f/110353/1288x564/3a7b67ff5e/download-1.jfif",
+        },
+        {
+          src: "//a.storyblok.com/f/110353/1600x700/21600b6877/download-2.jfif",
+        },
+      ],
+    };
+  },
+};
 </script>

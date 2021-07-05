@@ -42,7 +42,7 @@ export default {
   computed: {
     imageSrc() {
       if (!this.image) return null;
-      return this.image.src.replace(`a.storyblok.com`, `img2.storyblok.com/256x160`);
+      return this.image.src.replace(`a.storyblok.com`, `f/110353/256x256/8b76da8a58/icon2.png`);
     },
     imageSrcset() {
       if (!this.image) return null;
