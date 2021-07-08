@@ -3,7 +3,12 @@ import 'vuetify/dist/vuetify.min.css'
 import DefaultLayout from '~/layouts/Default.vue'
 import Vue from 'vue'
 import VueFbCustomerChat from 'vue-fb-customer-chat'
+import Embed from 'v-video-embed'
 
+
+
+// global register
+Vue.use(Embed);
 
 Vue.use(VueFbCustomerChat, {
   page_id: 113418543692422, //  change 'null' to your Facebook Page ID,

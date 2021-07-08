@@ -16,6 +16,7 @@
     "multiparty": "^4.2.2",
     "nodemailer": "^6.6.0",
     "storyblok-js-client": "^3.3.1",
+    "v-video-embed": "^1.0.8",
     "vue-fb-customer-chat": "^0.2.0",
     "vuetify": "^2.4.9"
   },
