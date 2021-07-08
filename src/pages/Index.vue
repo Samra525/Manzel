@@ -56,8 +56,3 @@ query LandingPage {
 }
 }
 </page-query>
-<style >
-.box {
-  width: 500px !important;
-}
-</style>
