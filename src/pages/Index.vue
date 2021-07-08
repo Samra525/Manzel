@@ -162,9 +162,7 @@ export default {
   data() {
     return {
       items: [
-        // {
-        //   src: "//a.storyblok.com/f/110353/1920x840/f7ee4fb113/ride1artboard-5-100.jpg",
-        // },
+        
         {
           src: "//a.storyblok.com/f/110353/1288x564/3a7b67ff5e/download-1.jfif",
         },
