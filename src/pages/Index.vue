@@ -1,6 +1,14 @@
 <template>
   <Layout>
-    <section id="hero">
+
+<v-img
+  lazy-src="//a.storyblok.com/f/110353/480x270/ef38389502/video.gif"
+  height="500"
+  max-width="2000"
+  src="//a.storyblok.com/f/110353/480x270/ef38389502/video.gif"
+></v-img>
+
+    <!-- <section id="hero">
       <v-parallax
   :src="$page.landingPage.fields.image" fit="contain"
   >
@@ -20,7 +28,7 @@
       </div>
             
         </v-parallax>
-      </section>
+      </section> -->
      
 
 </layout>
@@ -48,3 +56,8 @@ query LandingPage {
 }
 }
 </page-query>
+<style >
+.box {
+  width: 500px !important;
+}
+</style>
